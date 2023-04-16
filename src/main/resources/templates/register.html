@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+<div class="container">
+
+
+    <h1>Sign UP</h1>
+
+    <div class="form-group">
+             <th:block th:if="${session.msg}">
+                 <p class="text-center fs-3 text-success">[[${session.msg}]]</p>
+                 <th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+                </th:block>
+
+
+                <form action="createUser"method="post">
+                    <label for="name">Name:</label>
+                   <input type="text" id="name" name="fullName" required>
+
+                   <label for="email">Email:</label>
+                   <input type="email" id="email" name="email" required>
+
+                  <label for="password">Password:</label>
+                 <input type="password" id="password" name="password" required>
+
+
+
+                   <input type="submit" value="Signup">
+                    <style>
+                        h5 {
+                            color: red;
+                        }
+                    </style>
+                    <h5>password has to be 6length</h5>
+                    <h5>there should be an alphanumeric number</h5>
+
+
+                </form>
+
+    </div>
+    <li><a href="/signin">login</a></li>
+
+</div>
+</body>
+</html>

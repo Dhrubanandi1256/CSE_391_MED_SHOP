@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">Hello<span>Med</span></h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="/">HOME</a></li>
+
+                <li><a href="/shop">MEDICINES</a></li>
+
+
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/cart}"href="#">cart:</a> </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link"th:text="${cartCount}">0</a>-->
+<!--                </li>-->
+            </ul>
+        </div>
+
+
+
+
+    </div>
+    <div class="content">
+        <h1>TAKE MEDICINE & <br><span>SURVIVE</span> <br>HEALTHY</h1>
+        <p class="par">Are you looking for a trusted and reliable pharmacy that provides high-quality medicines at affordable<br> prices? Look no further than our medicine shop!  <br> Our knowledgeable and friendly staff is always ready to assist you with any questions or concerns<br> you may have about your medications.
+        </p>
+
+        <button class="cn"><a href="#">JOIN US</a></button>
+        <div th:if="${param.error}"class="alert alert-danger">
+            Invalid User email or password
+        </div>
+        <div th:if="${param.Logout}"class="alert alert-success">
+            Logout Succesful
+        </div>
+
+
+        <div class="form">
+            <h2>Login Here</h2>
+            <form action="login"method="post">
+<!--            <label for="Email">Email</label>-->
+               <input type="text" id="Email" name="username" required placeholder="Enter Email Here">
+<!--                <label for="password">Password:</label>-->
+                <input type="password" id="password" name="password" required placeholder="Enter password Here">
+                <button class="btnn" type="submit">Login</button>
+            </form>
+<!--                <input type="email" name="email" placeholder="Enter Email Here">-->
+<!--                <input type="password" name="" placeholder="Enter Password Here">-->
+
+<!--                            <label for="email">Email:</label>-->
+<!--                           <input type="email" id="email" name="email" required>-->
+
+
+
+
+            <p class="link">Don't have an account<br>
+                <a href="/register">Sign up </a> here</a></p>
+<!--            <th:block th:if="${session.msg}">-->
+<!--                <p class="text-center fs-3 text-success">[[${session.msg}]]</p>-->
+<!--                <th:block th:text="${#session.removeAttribute('msg')}"></th:block>-->
+<!--            </th:block>-->
+
+
+<!--            <form action="createUser"method="post">-->
+<!--                <label for="name">Name:</label>-->
+<!--                <input type="text" id="name" name="fullName" required>-->
+
+<!--                <label for="email">Email:</label>-->
+<!--                <input type="email" id="email" name="email" required>-->
+
+<!--                <label for="password">Password:</label>-->
+<!--                <input type="password" id="password" name="password" required>-->
+
+
+
+<!--                <input type="submit" value="Signup">-->
+<!--            </form>-->
+
+
+
+
+
+
+            <p class="liw">Log in with</p>
+
+
+
+
+
+
+            <div class="icons">
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

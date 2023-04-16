@@ -1,0 +1,215 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;   <title>Webpage Design</title>&ndash;&gt;-->
+<!--&lt;!&ndash;   <link rel="stylesheet" href="style1.css">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <link href="css/style.css" rel="stylesheet">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="utf-8">&ndash;&gt;-->
+<!--&lt;!&ndash;     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">&ndash;&gt;-->
+<!--&lt;!&ndash;       <title>Hello, world!</title>&ndash;&gt;-->
+
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;<div class="main">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="navbar">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="icon">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h2 class="logo">Hello<span>Med</span></h2>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <div class="menu">&ndash;&gt;-->
+<!--&lt;!&ndash;          <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;             <li><a href="/">HOME</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;             <li><a href="#">ABOUT</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;              <li><a href="/shop1">MEDICINES</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;              <li><a href="#">CONTACT</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;               <li><a href="#">CONTACT2</a></li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <li><a class="nav-link" th:href="@{/cart}"href="#">cart</a> </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li> <a class="nav-link"th:text="${cartCount}">0</a> </li>&ndash;&gt;-->
+<!--&lt;!&ndash;           </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;       </div>&ndash;&gt;-->
+<!--&lt;!&ndash;   </div>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;   <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;       <div class="col-sm-3">&ndash;&gt;-->
+<!--&lt;!&ndash;           <h4>categories</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;          <ul class="list-group">&ndash;&gt;-->
+<!--&lt;!&ndash;               <a th:href="@{/shop}"><li class="list-group-item">All products</li> </a>&ndash;&gt;-->
+<!--&lt;!&ndash;             <a href=""th:each="category,istat:${categories}"&ndash;&gt;-->
+<!--&lt;!&ndash;             th:href="@{/shop/category/{id}(id=${category.id})}">&ndash;&gt;-->
+<!--&lt;!&ndash;             <li class="list-group-item"th:text="${category.name}"></li></a>&ndash;&gt;-->
+<!--&lt;!&ndash;         </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="col-sm-9">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="card"style=""th:each="product:${products}">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                   <div class="card-body">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <h5 class="card-title"th:text="${product.name}"></h5>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <h4> <span th:text="${product.price}"></span></h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                     <p th:text="${product.description}">hehe</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;             </div>&ndash;&gt;-->
+<!--&lt;!&ndash;           </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <div class="col-sm-3">&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <div class="card"style=""th:each="product:${products}">&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;               <div class="card-body">&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                   <h5 class="card-title" th:text="${product.name}"></h5>&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                    <p class="card-text" th:text="${product.description}"></p>&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                   <h4 class="card-price" th:text="${product.price}"></h4>&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                   <a href="#" class="btn btn-primary">Buy Now</a>&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;               </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;          </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</body>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</html>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+
+
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<html xmlns:th="http://www.thymeleaf.org">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<head>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <title>Product Catalog</title>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <link rel="stylesheet" type="text/css" href="style1.css">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</head>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<body>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<header>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <h1>Product Catalog</h1>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</header>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<main>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <div class="container">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;           <div class="row">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;               <div class="col-sm-3">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                    <h4>categories</h4>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                   <ul class="list-group">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                       <a th:href="@{/shop}"><li class="list-group-item">All products</li> </a>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                        <a href=""th:each="category,istat:${categories}"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                      th:href="@{/shop/category/{id}(id=${category.id})}">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                        <li class="list-group-item"th:text="${category.name}"></li></a>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                  </ul>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <div class="products">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <div class="product" th:each="product: ${products}">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <h2 th:text="${product.name}"></h2>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <p th:text="${product.description}"></p>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <h3 th:text="${product.price}"></h3>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <button class="add-to-cart">Add to Cart</button>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</main>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<footer>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <p>&copy; 2023 Product Catalog</p>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</footer>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</body>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</html>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<html xmlns:th="http://www.thymeleaf.org">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<head>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <title>Category and Product List</title>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <link rel="stylesheet" type="text/css" href="style1.css">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</head>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<body>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<div class="container">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <div class="category-list">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <h2>Categories</h2>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <ul>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <li th:each="category : ${categories}">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                <a th:href="@{/category/{id}(id=${category.id})}" th:text="${category.name}"></a>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            </li>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        </ul>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <ul >&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                           <a th:href="@{/shop}"><li class="list-group-item">All products</li> </a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                         <a href=""th:each="category,istat:${categories}"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                         th:href="@{/shop/category/{id}(id=${category.id})}">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                            <li class="list-group-item"th:text="${category.name}"></li></a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                      </ul>&ndash;&gt;&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <div class="product-list">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <h2 th:text="${category.name}"></h2>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <ul>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <div class="card-body">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                <div class="product-list" th:each="product: ${products}">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                <h5 class="card-title"th:text="${product.name}"></h5>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                <h4> <span th:text="${product.price}"></span></h4>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                <p th:text="${product.description}">hehe</p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        </ul>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</body>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</html>&ndash;&gt;&ndash;&gt;-->
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">-->
+<!--<head>-->
+<!--   <title>Webpage Design</title>-->
+<!--   <link rel="stylesheet" href="style1.css">-->
+<!--&lt;!&ndash;    <link href="css/style.css" rel="stylesheet">&ndash;&gt;-->
+<!--    <meta charset="utf-8">-->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+
+<!--     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<!--       <title>Hello, world!</title>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<div class="category-container">-->
+<!--    <div class="category-card">-->
+<!--    <a th:href="@{/shop}"><li class="list-group-item">All products</li>-->
+<!--             <a href=""th:each="category,istat:${categories}"-->
+<!--           th:href="@{/shop/category/{id}(id=${category.id})}">-->
+<!--             <li class="list-group-item"th:text="${category.name}">-->
+<!--             </li>-->
+<!--             </a>-->
+<!--    </a>-->
+<!--    </div>-->
+<!--    </div>-->
+
+
+<!--&lt;!&ndash;        <div class="category-card" th:each="category : ${categories}">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a th:href="@{/products(categoryId=${category.id})}">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h3 th:text="${category.name}"></h3>&ndash;&gt;-->
+<!--&lt;!&ndash;            </a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+
+<!--    <div class="product-container">-->
+<!--        <div class="product-card" th:each="product : ${products}">-->
+<!--&lt;!&ndash;            <img th:src="${product.imageUrl}" alt="product image">&ndash;&gt;-->
+<!--            <h3 th:text="${product.name}"></h3>-->
+<!--            <p th:text="${product.description}"></p>-->
+<!--            <span th:text="${product.price}"></span>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
